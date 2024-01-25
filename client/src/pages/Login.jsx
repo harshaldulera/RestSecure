@@ -8,8 +8,10 @@ const Login = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(user != null) {
-            navigate('/');
+        if(user == null) {
+            navigate('/login');
+        } else {
+            navigate('/home');
         }
     }, [user, navigate]);
 
