@@ -1,2 +1,2 @@
 # RestSecure
-A DRF + Typescript Blog App for Cyber
+A DRF + React Blog App for Cyber
