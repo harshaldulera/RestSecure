@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { AuthContextProvider, UserAuth } from "../contexts/AuthContext";
+
 const Home = () => {
     return (
         <div>
