@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
     const { user } = UserAuth();
     const navigate = useNavigate();
-    // console.log(user);
 
     useEffect(() => {
         if(user == null) {
