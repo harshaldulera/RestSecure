@@ -9,7 +9,7 @@ class Post(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    comment_set = models.ManyToManyField('Comment', blank=True)
+    comments = models.ManyToManyField('Comment', blank=True, related_name='post_comments')
     likes = models.ManyToManyField(User, related_name='liked_posts', blank=True)
 
     def __str__(self):
@@ -21,6 +21,7 @@ class Comment(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    related_name="posts_comment_set_post"
 
     def __str__(self):
         return self.content[:50]
